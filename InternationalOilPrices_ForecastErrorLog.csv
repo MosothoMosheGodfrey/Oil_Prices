@@ -1,0 +1,148 @@
+Datetime,Product,Model Name,Issue/Error
+2025-02-16 16:03:01.615571,Brent Crude Oil (ICE),LSTM,"in user code:
+
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2341, in predict_function  *
+        return step_function(self, iterator)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2327, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2315, in run_step  **
+        outputs = model.predict_step(data)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2283, in predict_step
+        return self(x, training=False)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/utils/traceback_utils.py"", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/input_spec.py"", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer ""sequential"" is incompatible with the layer: expected shape=(None, 1, 1), found shape=(None, 8, 1)
+"
+2025-02-16 16:04:16.585186,Brent Crude Oil (ICE),GRU,"in user code:
+
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2341, in predict_function  *
+        return step_function(self, iterator)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2327, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2315, in run_step  **
+        outputs = model.predict_step(data)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2283, in predict_step
+        return self(x, training=False)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/utils/traceback_utils.py"", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/input_spec.py"", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer ""sequential_1"" is incompatible with the layer: expected shape=(None, 1, 1), found shape=(None, 8, 1)
+"
+2025-02-16 16:04:16.591395,Brent Crude Oil (ICE),XGBoost,"[16:04:16] ../src/c_api/../data/array_interface.h:129: Check failed: typestr.size() == 3 || typestr.size() == 4: `typestr' should be of format <endian><type><size of type in bytes>.
+Stack trace:
+  [bt] (0) /usr/local/lib/python3.10/dist-packages/xgboost/lib/libxgboost.so(+0x1395a3) [0x7fa8111395a3]
+  [bt] (1) /usr/local/lib/python3.10/dist-packages/xgboost/lib/libxgboost.so(+0x165fe6) [0x7fa811165fe6]
+  [bt] (2) /usr/local/lib/python3.10/dist-packages/xgboost/lib/libxgboost.so(+0x16d28c) [0x7fa81116d28c]
+  [bt] (3) /usr/local/lib/python3.10/dist-packages/xgboost/lib/libxgboost.so(XGDMatrixCreateFromDense+0x174) [0x7fa81114ad54]
+  [bt] (4) /lib/x86_64-linux-gnu/libffi.so.8(+0x7e2e) [0x7fa8c7285e2e]
+  [bt] (5) /lib/x86_64-linux-gnu/libffi.so.8(+0x4493) [0x7fa8c7282493]
+  [bt] (6) /usr/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so(+0xa3e9) [0x7fa8c7ac33e9]
+  [bt] (7) /usr/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so(+0x9a00) [0x7fa8c7ac2a00]
+  [bt] (8) python(_PyObject_MakeTpCall+0x25b) [0x557ccb88b39b]
+
+"
+2025-02-16 16:04:19.791543,Brent Crude Oil (ICE),Hybrid LSTM+ARIMA,local variable 'forecast_lstm' referenced before assignment
+2025-02-16 16:04:19.799383,Brent Crude Oil (ICE),GPR,ufunc 'divide' cannot use operands with types dtype('<M8[ns]') and dtype('float64')
+2025-02-16 16:06:47.173944,Heating Oil (NYMEX),LSTM,"in user code:
+
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2341, in predict_function  *
+        return step_function(self, iterator)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2327, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2315, in run_step  **
+        outputs = model.predict_step(data)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2283, in predict_step
+        return self(x, training=False)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/utils/traceback_utils.py"", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/input_spec.py"", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer ""sequential_2"" is incompatible with the layer: expected shape=(None, 1, 1), found shape=(None, 8, 1)
+"
+2025-02-16 16:08:40.850673,Heating Oil (NYMEX),GRU,"in user code:
+
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2341, in predict_function  *
+        return step_function(self, iterator)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2327, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2315, in run_step  **
+        outputs = model.predict_step(data)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2283, in predict_step
+        return self(x, training=False)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/utils/traceback_utils.py"", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/input_spec.py"", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer ""sequential_3"" is incompatible with the layer: expected shape=(None, 1, 1), found shape=(None, 8, 1)
+"
+2025-02-16 16:08:40.857274,Heating Oil (NYMEX),XGBoost,"[16:08:40] ../src/c_api/../data/array_interface.h:129: Check failed: typestr.size() == 3 || typestr.size() == 4: `typestr' should be of format <endian><type><size of type in bytes>.
+Stack trace:
+  [bt] (0) /usr/local/lib/python3.10/dist-packages/xgboost/lib/libxgboost.so(+0x1395a3) [0x7fa8111395a3]
+  [bt] (1) /usr/local/lib/python3.10/dist-packages/xgboost/lib/libxgboost.so(+0x165fe6) [0x7fa811165fe6]
+  [bt] (2) /usr/local/lib/python3.10/dist-packages/xgboost/lib/libxgboost.so(+0x16d28c) [0x7fa81116d28c]
+  [bt] (3) /usr/local/lib/python3.10/dist-packages/xgboost/lib/libxgboost.so(XGDMatrixCreateFromDense+0x174) [0x7fa81114ad54]
+  [bt] (4) /lib/x86_64-linux-gnu/libffi.so.8(+0x7e2e) [0x7fa8c7285e2e]
+  [bt] (5) /lib/x86_64-linux-gnu/libffi.so.8(+0x4493) [0x7fa8c7282493]
+  [bt] (6) /usr/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so(+0xa3e9) [0x7fa8c7ac33e9]
+  [bt] (7) /usr/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so(+0x9a00) [0x7fa8c7ac2a00]
+  [bt] (8) python(_PyObject_MakeTpCall+0x25b) [0x557ccb88b39b]
+
+"
+2025-02-16 16:08:42.928324,Heating Oil (NYMEX),Hybrid LSTM+ARIMA,local variable 'forecast_lstm' referenced before assignment
+2025-02-16 16:08:42.934182,Heating Oil (NYMEX),GPR,ufunc 'divide' cannot use operands with types dtype('<M8[ns]') and dtype('float64')
+2025-02-16 16:11:54.995213,WTI Crude Oil (NYMEX),LSTM,"in user code:
+
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2341, in predict_function  *
+        return step_function(self, iterator)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2327, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2315, in run_step  **
+        outputs = model.predict_step(data)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2283, in predict_step
+        return self(x, training=False)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/utils/traceback_utils.py"", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/input_spec.py"", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer ""sequential_4"" is incompatible with the layer: expected shape=(None, 1, 1), found shape=(None, 8, 1)
+"
+2025-02-16 16:13:54.194045,WTI Crude Oil (NYMEX),GRU,"in user code:
+
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2341, in predict_function  *
+        return step_function(self, iterator)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2327, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2315, in run_step  **
+        outputs = model.predict_step(data)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py"", line 2283, in predict_step
+        return self(x, training=False)
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/utils/traceback_utils.py"", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File ""/usr/local/lib/python3.10/dist-packages/keras/src/engine/input_spec.py"", line 298, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer ""sequential_5"" is incompatible with the layer: expected shape=(None, 1, 1), found shape=(None, 8, 1)
+"
+2025-02-16 16:13:54.203404,WTI Crude Oil (NYMEX),XGBoost,"[16:13:54] ../src/c_api/../data/array_interface.h:129: Check failed: typestr.size() == 3 || typestr.size() == 4: `typestr' should be of format <endian><type><size of type in bytes>.
+Stack trace:
+  [bt] (0) /usr/local/lib/python3.10/dist-packages/xgboost/lib/libxgboost.so(+0x1395a3) [0x7fa8111395a3]
+  [bt] (1) /usr/local/lib/python3.10/dist-packages/xgboost/lib/libxgboost.so(+0x165fe6) [0x7fa811165fe6]
+  [bt] (2) /usr/local/lib/python3.10/dist-packages/xgboost/lib/libxgboost.so(+0x16d28c) [0x7fa81116d28c]
+  [bt] (3) /usr/local/lib/python3.10/dist-packages/xgboost/lib/libxgboost.so(XGDMatrixCreateFromDense+0x174) [0x7fa81114ad54]
+  [bt] (4) /lib/x86_64-linux-gnu/libffi.so.8(+0x7e2e) [0x7fa8c7285e2e]
+  [bt] (5) /lib/x86_64-linux-gnu/libffi.so.8(+0x4493) [0x7fa8c7282493]
+  [bt] (6) /usr/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so(+0xa3e9) [0x7fa8c7ac33e9]
+  [bt] (7) /usr/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so(+0x9a00) [0x7fa8c7ac2a00]
+  [bt] (8) python(_PyObject_MakeTpCall+0x25b) [0x557ccb88b39b]
+
+"
+2025-02-16 16:13:59.007754,WTI Crude Oil (NYMEX),Hybrid LSTM+ARIMA,local variable 'forecast_lstm' referenced before assignment
+2025-02-16 16:13:59.016750,WTI Crude Oil (NYMEX),GPR,ufunc 'divide' cannot use operands with types dtype('<M8[ns]') and dtype('float64')
